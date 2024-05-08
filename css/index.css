@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif; /* 設定字體 */
+  margin: 0; /* 清除頁面邊距 */
+  padding: 0; /* 清除頁面內距 */
+}
+
+/* 頁面頂部標題樣式 */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1px ;
+  position: fixed; /* 固定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* 主要內容區域樣式 */
+h1 {
+  padding: 10px; /* 上下左右各增加 20px 的內距 */
+  text-align: center; /* 文字置中 */
+}
+
+/* 左側設定欄樣式 */
+  aside {
+    width: 200px;
+    background-color: #fffefe;
+    padding: 35px;
+    overflow-y: auto;
+    position: fixed;
+    top: 110px;
+    left: 0;
+  }
+
+h2 {
+  margin-top: 15px !important; /* 清除標題頂部外距 */
+  margin-top: -25px;
+}
+
+ul {
+  margin-top: 55px;
+  list-style: none; /* 清除項目符號 */
+  padding: 0; /* 清除內部內距 */
+}
+
+li {
+  margin-bottom: 45px; /* 項目之間增加外距 */
+}
+
+a {
+  text-decoration: none; /* 清除超連結下劃線 */
+  color: #333; /* 設定文字顏色 */
+}
+
+a:hover {
+  color: #443ccb; /* 滑過時改變文字顏色 */
+}
+
+img {
+  margin-right: 15px; /* 圖片與文字之間的間距 */
+}
+
+li {
+  display: flex;
+  align-items: center; /* 水平對齊 */
+}
+
+aside img {
+  width: 40px;
+  height: 40px;
+} /*圖片大小*/
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+/* 登入和註冊按鈕 */
+.login-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* 距離右邊 20px */
+}
+
+/* 登入/註冊按鈕樣式 */
+.login-button {
+  background-color: #5793d2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* 按鈕之間增加距離 */
+}
+
+/* 登入和註冊按鈕滑過時的樣式 */
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* 貼文部分樣式 */
+.card {
+  width: 400px;
+  height: 280px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  flex-direction: column; 
+}
+
+.card:before {
+  content: ''; /* 分隔線 */
+  position: absolute; 
+  top: 85%;
+  left: 0; 
+  width: 100%;
+  height: 1px; 
+  background-color: #000000;
+  z-index: 1;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+}
+
+.joinbutton {
+  position: absolute; 
+  bottom: 10px; 
+  right: 10px; 
+}   
+
+/* 橋位置 */
+.card1 {
+  position: absolute;
+  top: 140px;
+  left: 220px; 
+}
+
+.card2 {
+  position: absolute;
+  top: 140px;
+  left: 650px; 
+}
+
+.card3{
+  position: absolute;
+  top: 140px;
+  margin-left: 1080px;
+}
+
+.card4{
+  position: absolute;
+  top: 450px;
+  margin-left: 220px;
+}
+
+.card5{
+  position: absolute;
+  top: 450px;
+  margin-left: 650px;
+}
+
+.card6{
+  position: absolute;
+  top: 450px;
+  margin-left: 1080px;
+}

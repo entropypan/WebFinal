@@ -1,0 +1,112 @@
+/* Reset 樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 全域樣式 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* 麵包屑樣式 */
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item a {
+  color: #007bff; /* 將前頁連結設置為藍色 */
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #666; /* 將當前頁面設置為灰色 */
+}
+
+.breadcrumb-item::after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+/* 標題和按鈕容器 */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* 標題樣式 */
+h1 {
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+/* Upload my Response 按鈕樣式 */
+#uploadButton {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4795e7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+#uploadButton:hover {
+  background-color: #26609e;
+}
+
+.discussion-block {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.discussion-block h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.more-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #3484db;
+  text-decoration: none;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+  color: #185fab;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.photos img {
+  width: calc(25% - 20px);
+  margin: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 麵包屑樣式 */
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #666;
+}
+
+.breadcrumb-item::after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#content-wrapper {
+  display: flex;
+  max-width: 1200px;
+}
+
+#sidebar {
+  width: 200px;
+  background-color: #333;
+  height: 500px;
+  overflow-y: auto;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar ul li {
+  margin-top: auto;
+  padding: 10px 0;
+}
+
+#sidebar ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#main-content {
+  padding: 20px;
+  width: calc(100% - 200px);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.setting-page {
+  width: 400px;
+  height: 350px;
+  display: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.setting-page h2 {
+  color: #333;
+}
+
+.setting-page img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.setting-page form {
+  max-width: 300px;
+}
+
+.setting-page form label {
+  display: block;
+  margin-bottom: -10px;
+}
+
+.setting-page form input[type="text"],
+.setting-page form input[type="email"],
+.setting-page form input[type="password"],
+.setting-page form select,
+.setting-page form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.setting-page form input[type="date"] {
+  margin-bottom: 10px;
+}
+
+.setting-page form input[type="text"]::placeholder,
+.setting-page form input[type="email"]::placeholder,
+.setting-page form input[type="password"]::placeholder,
+.setting-page form select::placeholder,
+.setting-page form textarea::placeholder {
+  color: #131313;
+}
+
+.setting-page form input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.setting-page form label[for="news"],
+.setting-page form label[for="product-updates"] {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.setting-page form button {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.setting-page form button:hover {
+  background-color: #8c8c8c;
+  color: #0e0e0e;
+}
+
+.setting-page form button[type="button"] {
+  background-color: #454343;
+}
+
+.setting-page form button[type="button"]:hover {
+  background-color: #8c8c8c;
+  color: #0e0e0e;
+}

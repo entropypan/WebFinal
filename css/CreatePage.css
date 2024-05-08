@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 照片和資料區 */
+.info-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* 上傳照片按鈕樣式 */
+#upload-photo {
+  display: none;
+  margin-top: 50px;
+}
+
+#upload-label {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 上傳照片區 */
+.uploaded-photo {
+  margin-top: 20px;
+}
+
+.uploaded-photo img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+/* 表單樣式 */
+#info-form {
+  width: 40%;
+}
+
+#info-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#info-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#info-form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #1f96e1;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#info-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* 用戶上傳照片區域 */
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+
+.upload-section label {
+  margin-right: 10px;
+}

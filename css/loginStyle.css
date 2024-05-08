@@ -1,0 +1,100 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.loginPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  border-radius: 5px;
+  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+  width: 300px;
+  text-align: center;
+}
+
+.login h3 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(249, 248, 248, 0);
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid rgba(249, 248, 248, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.login button {
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #616060;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.login button:hover {
+  background-color: #e1c19e;
+  color: #fff;
+}
+
+.login a {
+  color: #e1c19e;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+.login h4,
+.login a {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.signup {
+  color: #767779;
+}
+
+.signup a {
+  color: #e1c19e;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+.signup h6 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}

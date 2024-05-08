@@ -1,0 +1,170 @@
+body {
+  background-color: #ffffff;
+  color: #141414;
+}
+
+.breadcrumb {
+  font-family: Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #666;
+}
+
+.breadcrumb-item::after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 0px 20%;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  margin-right: 30px;
+}
+
+.idfollow {
+  display: inline-block;
+}
+
+header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #cccccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #1f1e1e;
+}
+
+header button {
+  width: 159px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 30px;
+  background-color: rgba(144, 143, 143, 0);
+  color: #242323;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+header button:hover {
+  border: none;
+  background-color: rgba(2, 2, 2, 0.8);
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -50px;
+  padding: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: rgba(255, 255, 255, 0);
+  margin-bottom: 5px;
+}
+
+#uploadedBtn,
+#favoriteBtn {
+  width: 150px;
+  padding: 15px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  background-color: rgba(144, 143, 143, 0);
+  color: rgb(67, 66, 66);
+  border: 1.5px solid rgb(93, 93, 93);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#uploadedBtn:hover,
+#favoriteBtn:hover {
+  border: none;
+  background-color: rgba(27, 27, 27, 0.6);
+  color: #f3f3f3;
+}
+
+main section {
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.photo-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+  padding: 20px 10%;
+  overflow-x: auto;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 10px;
+}

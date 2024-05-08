@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* 麵包屑樣式 */
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #666;
+}
+
+.breadcrumb-item::after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+/* 標題和按鈕容器 */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* 標題樣式 */
+h1 {
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+/* Upload my Response 按鈕樣式 */
+#uploadButton {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4795e7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+#uploadButton:hover {
+  background-color: #26609e;
+}
+
+/* 貓咪圖片樣式 */
+.uploaded-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 將照片靠左對齊 */
+  margin-top: 20px;
+}
+
+.uploaded-images img {
+  width: calc(25% - 20px); /* 調整每張照片的寬度 */
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .uploaded-images img {
+    width: calc(50% - 20px);
+  }
+}
