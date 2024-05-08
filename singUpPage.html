@@ -12,31 +12,31 @@
         <div class="signup">
           <h3>Welcome!</h3>
 
-          <form action="php位址">
+          <form method="POST" action="php/signup.php">
             <label for="username">Username:</label>
             <input
               required
               type="text"
-              id="username"
-              name="username"
-              placeholder="cw.ku"
+              id="name_input"
+              name="name_input"
+              placeholder="your name"
             />
             <div class="field"></div>
             <label for="email">Email:</label>
             <input
               required
-              type="email"
-              id="email"
-              name="email"
-              placeholder="woyaoSiouXue@gmail.com"
+              type="mail"
+              id="mail_input"
+              name="mail_input"
+              placeholder="example@gmail.com"
             />
             <div class="field"></div>
             <label for="password">Password:</label>
             <input
               required
               type="password"
-              id="password"
-              name="password"
+              id="password_input"
+              name="password_input"
               placeholder="Password"
             />
             <div class="field"></div>
@@ -44,8 +44,8 @@
             <input
               required
               type="password"
-              id="confirm"
-              name="confirm"
+              id="confirm_input"
+              name="confirm_input"
               placeholder="Confirm Password"
             />
             <div class="field"></div>
