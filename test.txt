@@ -1,2 +1,6 @@
 測試git push而已
+<<<<<<< HEAD
 test 6
+=======
+test 4
+>>>>>>> 0e42235 (last test)
