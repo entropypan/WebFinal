@@ -52,7 +52,7 @@
         </li>
         <li>
           <img src="Allphotos/SignUp.png" alt="Forum" /><a
-            href="singUpPage.html"
+            href="signUpPage.html"
             class="button set-button"
             >Sign Up</a
           >
