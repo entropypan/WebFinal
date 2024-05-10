@@ -59,7 +59,7 @@
     <!-- 1 -->
     <div class="card1">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">The Cat Within My Gaze...</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
@@ -69,7 +69,7 @@
     <!-- 2 -->
     <div class="card2">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 2</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
@@ -79,7 +79,7 @@
     <!-- 3 -->
     <div class="card3">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 3</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
@@ -89,7 +89,7 @@
     <!-- 4 -->
     <div class="card4">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 4</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
@@ -99,7 +99,7 @@
     <!-- 5 -->
     <div class="card5">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 5</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
@@ -109,7 +109,7 @@
     <!-- 6 -->
     <div class="card6">
       <div class="card">
-        <img src="../photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 6</h5>
           <a href="../page/discussion.html" class="joinbutton">Join</a>
