@@ -1,8 +1,8 @@
 <?php
 //註冊
 
-require_once("../PHP/connectDB.php");
-require_once("../PHP/common.php");
+require_once("../php/connectDB.php");
+require_once("../php/common.php");
 $tableName = "users";
 
 $pass = 0;
@@ -14,7 +14,7 @@ $mail_post = $_POST["mail_input"];
 //$mail_post = $_POST["mail_input"];
 if (!filter_var($mail_post, FILTER_VALIDATE_EMAIL)) {
     echo "<script>alert('Invalid email format')</script>";
-    echo "<script>location.href='../signUpPage.html'</script>";
+    echo "<script>location.href='../page/signUpPage.html'</script>";
     // die("Invalid email format");
     $pass = 1;
 };
@@ -29,7 +29,7 @@ mysqli_query($conn, 'SET NAMES utf8');
 //檢查重複email
 if (checkHasData($tableName, "mail", "mail", $mail_post)) {
     echo "<script>alert('Email already exists')</script>";
-    echo "<script>location.href='../signUpPage.html'</script>";
+    echo "<script>location.href='../page/signUpPage.html'</script>";
     // die("Email already exists");
     $pass = 1;
 }
@@ -38,7 +38,7 @@ if (checkHasData($tableName, "mail", "mail", $mail_post)) {
 //兩次密碼不同
 if ($passwd_post != $confirm_post) {
     echo "<script>alert('Please check your password again')</script>";
-    echo "<script>location.href='../signUpPage.html'</script>";
+    echo "<script>location.href='../page/signUpPage.html'</script>";
     // die("Please check your password again");
     $pass = 1;
 }
