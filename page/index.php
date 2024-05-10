@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picruise</title>
+
     <!--接到CSS檔案-->
     <link rel="stylesheet" href="../css/index.css" />
   </head>
+
   <body>
+
+    <!--檢查登入-->
+    <?php
+    require("../php/autoLogin.php");
+    ?>
+
     <header>
       <h1>Picruise</h1>
       <!-- 新增登入和註冊按鈕結束 --> 
@@ -21,36 +29,39 @@
             Home
           </a>
         </li>
-        <li>
-          <img src="../Allphotos/Initiate.png" alt="create" />
-          <a href="../page/allDiscussion.html" class="button set-button">
-            Initiate
-          </a>
-        </li>
-        <li>
-          <img src="../Allphotos/Profile1.png" alt="profile" />
-          <a href="../page/profile.html" class="button set-button">
-            Profile
-          </a>
-        </li>
-        <li>
-          <img src="../Allphotos/Accounts.png" alt="notification" />
-          <a href="../page/accoutSettings.html" class="button set-button">
-            Setting
-          </a>
-        </li>
-        <li>
-          <img src="../Allphotos/login.png" alt="Forum" />
-          <a href="../page/loginpage.html" class="button set-button">                     
-            Log in/out
-          </a>
-        </li>
-        <li>
-          <img src="../Allphotos/SignUp.png" alt="Forum" />
-          <a href="../page/signUpPage.html" class="button set-button"> 
-            Sign Up
-          </a>
-        </li>
+        <?php if (@$_SESSION['id']) { ?>
+          <li>
+            <img src="../Allphotos/Initiate.png" alt="create" />
+            <a href="../page/allDiscussion.html" class="button set-button">
+              Initiate
+            </a>
+          </li>
+          <li>
+            <img src="../Allphotos/Profile1.png" alt="profile" />
+            <a href="../page/profile.php" class="button set-button">
+              Profile
+            </a>
+          </li>
+          <li>
+            <img src="../Allphotos/Accounts.png" alt="notification" />
+            <a href="../page/accoutSettings.html" class="button set-button">
+              Setting
+            </a>
+          </li>
+        <?php } else { ?>
+          <li>
+            <img src="../Allphotos/login.png" alt="Forum" />
+            <a href="../page/loginpage.html" class="button set-button">                     
+              Log in
+            </a>
+          </li>
+          <li>
+            <img src="../Allphotos/SignUp.png" alt="Forum" />
+            <a href="../page/signUpPage.html" class="button set-button"> 
+              Sign Up
+            </a>
+          </li>
+        <?php } ?>
         <!-- 添加更多主題 -->
       </ul>
     </aside>
