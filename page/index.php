@@ -48,14 +48,18 @@
             Setting
           </a>
         </li>
+
         <?php if (@$_SESSION['id']) { ?>
+          
         <li>
           <img src="../Allphotos/login.png" alt="Forum" />
           <a href="../php/logout.php" class="button set-button">                     
             Log out
           </a>
         </li>
+
         <?php } else { ?>
+
         <li>
           <img src="../Allphotos/login.png" alt="Forum" />
           <a href="../page/loginpage.html" class="button set-button">                     
@@ -68,7 +72,9 @@
             Sign Up
           </a>
         </li>
+
         <?php } ?>
+
         <!-- 添加更多主題 -->
       </ul>
     </aside>
