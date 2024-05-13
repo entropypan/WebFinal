@@ -4,8 +4,10 @@ session_start();
 //檢查cookie
 if (isset($_COOKIE['ID'])) {
     $_SESSION['ID'] = $_COOKIE['ID'];
+    // echo "<script>alert('testOK')</script>";
 } elseif (isset($_SESSION['ID'])) {
     $_COOKIE['ID'] = $_SESSION['ID'];
+    // echo "<script>alert('testOK2')</script>";
 }
 
 // GUP func

@@ -9,7 +9,7 @@
   <body>
 
     <?php require("../php/autoLogin.php"); 
-    if(!isset($_SESSION["id"])) {
+    if(!isset($_SESSION['ID'])) {
         echo "<script>alert('請先登入')</script>";
         echo "<script>location.href='../page/loginPage.html'</script>";
     }
