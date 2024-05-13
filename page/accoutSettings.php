@@ -8,6 +8,13 @@
   </head>
   <body>
 
+    <?php require("../php/autoLogin.php"); 
+    if(!isset($_SESSION["id"])){
+        echo "<script>alert('請先登入')</script>";
+        echo "<script>location.href='../page/loginPage.html'</script>";
+    }
+    ?>
+
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">

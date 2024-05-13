@@ -44,7 +44,7 @@
         </li>
         <li>
           <img src="../Allphotos/Accounts.png" alt="notification" />
-          <a href="../page/accoutSettings.html" class="button set-button">
+          <a href="../page/accoutSettings.php" class="button set-button">
             Setting
           </a>
         </li>
