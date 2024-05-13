@@ -49,7 +49,7 @@
           </a>
         </li>
 
-        <?php if (@$_SESSION['id']) { ?>
+        <?php if (@$_SESSION['ID']) { ?>
           
         <li>
           <img src="../Allphotos/login.png" alt="Forum" />
