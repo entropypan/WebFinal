@@ -34,7 +34,7 @@
           
           <h1>@forky.0731</h1>
           
-          <button>Follow</button>
+          <!-- <button>Follow</button> -->
         </div>
 
         
