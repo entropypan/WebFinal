@@ -32,7 +32,7 @@
         
         <li>
           <img src="../Allphotos/Initiate.png" alt="create" />
-          <a href="../page/allDiscussion.html" class="button set-button">
+          <a href="../page/alldiscussion.php" class="button set-button">
             Initiate
           </a>
         </li>
@@ -86,7 +86,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">The Cat Within My Gaze...</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 2</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 3</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 4</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 5</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>
@@ -136,7 +136,7 @@
         <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 6</h5>
-          <a href="../page/discussion.html" class="joinbutton">Join</a>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
     </div>

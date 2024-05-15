@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../css/discussionStyle.css" />
   </head>
   <body>
+
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../page/index.php">Home</a></li>
         <li class="breadcrumb-item">
-          <a href="../page/allDiscussion.html">Discussion</a>
+          <a href="../page/allDiscussion.php">Discussion</a>
         </li>
         <li class="breadcrumb-item active" aria-current="The cat within my gaze...">
           The cat within my gaze...
@@ -24,29 +25,29 @@
       <!-- 標題 -->
       <h1>The Cat Within My Gaze...</h1>
 
-      <a id="uploadButton" href="../page/CreatePage.html">Upload my Response</a>
+      <a id="uploadButton" href="../page/CreatePage.php">Upload my Response</a>
     </div>
 
     <!-- 上傳上來的照片 -->
     <div class="uploaded-images">
       <img
-        src="https://www.pexels.com/photo/cat-animal-pet-eyes-416160/"
+        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
         alt="Photo1"
       />
       <img
-        src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
         alt="Photo2"
       />
       <img
-        src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
         alt="Photo3"
       />
       <img
-        src="https://www.pexels.com/photo/selective-focus-photography-of-gray-tabby-cat-1180074/"
+        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
         alt="Photo4"
       />
       <img
-        src="https://www.pexels.com/photo/animal-kitten-cat-pet-33621/"
+        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
         alt="Cat 5"
       />
     </div>

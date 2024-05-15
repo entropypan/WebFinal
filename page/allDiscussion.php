@@ -46,7 +46,7 @@
         />
       </div>
 
-      <a href="../page/discussion.html" class="more-link">...more</a>
+      <a href="../page/discussion.php" class="more-link">...more</a>
     </div>
 
     <!-- 區塊2 -->

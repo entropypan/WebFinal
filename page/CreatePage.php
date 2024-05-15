@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="../css/CreatePage.css" />
   </head>
   <body style="background-image: url(../Allphotos/createback.jpg)">
+
+    <?php require("../php/autoLogin.php"); 
+    if(!isset($_SESSION['ID'])){
+        echo "<script>alert('請先登入')</script>";
+        echo "<script>location.href='../page/loginPage.html'</script>";
+    }
+    ?>
+
     <main>
       <div class="info-section">
         <!-- 按鈕區域 -->
