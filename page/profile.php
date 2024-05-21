@@ -27,7 +27,7 @@
 
     <header>
       
-      <img src="../Allphotos/forky.jpg" alt="User Avatar" />
+      <img src=<?php GetUserData('img') ?> alt="User Avatar" />
 
       <section id="mainProfile">
         <div id="idfollow" class="user-info">

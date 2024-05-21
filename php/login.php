@@ -17,6 +17,7 @@ if ($result->num_rows > 0) {
             session_start();
             $_SESSION['ID'] = @$row['ID'];
             setcookie('ID', @$row['ID'], time() + 60 * 60 * 7);
+            //echo "<script>alert('GO')</script>";
             echo "<script> location.href='../index.php'  </script>";
         }
         else {

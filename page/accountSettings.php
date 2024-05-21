@@ -46,10 +46,22 @@
         <div id="main-content">
           <div id="basic-info" class="setting-page" style="display: block">
             <h2>General</h2>
+
             <form from method="POST" action="../php/setting.php">
               <div class="user-avatar">
-                <img src="../Allphotos/forky.jpg" alt="User Avatar" /><br />
-                <input type="file" id="avatar" name="avatar" /><br />
+
+                <?php if(GetData('imgf') == 0) : ?>
+                  <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+                <?php else : ?>
+                  <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
+                <?php endif; ?>
+
+                <input type="hidden" name="imagestring">
+                
+                <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
+                
+                <img id="show_image" src="">          
+                <br />
               </div>
               <label for="username">Username:</label><br />
               <input
@@ -94,8 +106,10 @@
                 placeholder=
               /><br />-->
               <label for="bio">Bio:</label><br />
-              <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea><br />
-              <button type="submit">Save Changes</button>
+              <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea>
+              <br />
+
+              <button type="submit" style="background-color: #8c8c8c">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
               <br />
             </form>
@@ -129,7 +143,7 @@
             <h2>Profile Info</h2>
             <form>
               <label for="bio">Bio:</label><br />
-              <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea><br />
+              <textarea id="bio" name="bio"></textarea><br />
               <label for="birthday">Birthday:</label><br />
               <input type="date" id="birthday" name="birthday" /><br />
               <label for="country">Country:</label><br />
@@ -187,6 +201,44 @@
       function cancelChanges() {
         alert("Changes canceled");
       }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    var imageProc = function (input) {
+      if (input.files && input.files[0]) {
+        // 建立一個 FileReader 物件
+        var reader = new FileReader();
+
+        // 當檔案讀取完後，所要進行的動作
+        reader.onload = function (e) {
+          // 顯示圖片
+          $('#show_image')
+          .attr("src", e.target.result)
+          .css("display","inline-block")
+          .css("width","100px")
+          .css("border-radius","50%")
+          .css("aspect-ratio","1/1")
+          .css("background-image", e.target.result)
+          .css("background-size","cover")
+          .css("background-position","center")
+          .css("print-color-adjust","exact")
+          .css("-webkit-print-color-adjust","exact")
+          // 將 DataURL 放到表單中
+          $("input[name='imagestring']").val(e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+
+      }
+    }
+
+    $(document).ready(function() {
+      // 綁定事件
+      $("#previewImage").change(function () {
+        imageProc(this);
+      });
+    });
+
     </script>
   </body>
 </html>

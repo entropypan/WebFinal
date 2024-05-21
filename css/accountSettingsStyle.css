@@ -104,13 +104,17 @@ body {
 
 .setting-page img {
   width: 100px;
-  height: 100px;
+  /*height: 100px;*/
+  /*background-image: url("../AllPhotos/forgot.jpg");*/
   border-radius: 50%;
   margin-right: 20px;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  background-position: center;
 }
 
 .setting-page form {
-  max-width: 300px;
+  max-width: 360px;
 }
 
 .setting-page form label {

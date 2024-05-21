@@ -22,15 +22,16 @@ if (checkHasData($tablename, "tag", "tag", $tag_post)) {
     echo "<script>alert('Username already exists')</script>";
     echo "<script>location.href='../page/accountSettings.php'</script>";
 }*/
-
+$imagestring = trim($_REQUEST["imagestring"]);
 $uID = $_SESSION["ID"];
-
 $sql = "UPDATE $tablename SET 
         tag='$tag_post',
         name='$name_post',
         tag1='$tag1_post',
         tag2='$tag2_post',
         tag3='$tag3_post',
+        img='$imagestring',
+        imgf=1,
         profile='$bio_post'
         WHERE ID='$uID'";
 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
