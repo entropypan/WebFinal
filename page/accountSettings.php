@@ -35,9 +35,9 @@
             <li>
               <a href="#" onclick="showSetting('change-password')">Change Password</a>
             </li>
-            <li>
+            <!--<li>
               <a href="#" onclick="showSetting('profile-info')">Profile Info</a>
-            </li>
+            </li>-->
             <li>
               <a href="#" onclick="showSetting('notification')">Notifications</a>
             </li>
@@ -46,7 +46,7 @@
         <div id="main-content">
           <div id="basic-info" class="setting-page" style="display: block">
             <h2>General</h2>
-            <form>
+            <form from method="POST" action="../php/setting.php">
               <div class="user-avatar">
                 <img src="../Allphotos/forky.jpg" alt="User Avatar" /><br />
                 <input type="file" id="avatar" name="avatar" /><br />
@@ -56,32 +56,48 @@
                 type="text"
                 id="username"
                 name="username"
-                placeholder="forky.0731"
+                value=<?php GetUserData('tag') ?>
               /><br />
-
-              <label for="firstname">First Name:</label><br />
+              <label for="realname">Real Name:</label><br />
               <input
                 type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Forky"
+                id="realname"
+                name="realname"
+                value=<?php GetUserData('name') ?>
               /><br />
-              <label for="lastname">Last Name:</label><br />
+              <label for="tag1">Tag 1:</label><br />
               <input
                 type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Anderson"
+                id="tag1"
+                name="tag1"
+                value=<?php GetUserData('tag1') ?>
               /><br />
-              <label for="email">Email:</label><br />
+              <label for="tag2">Tag 2:</label><br />
+              <input
+                type="text"
+                id="tag2"
+                name="tag2"
+                value=<?php GetUserData('tag2') ?>
+              /><br />
+              <label for="tag3">Tag 3:</label><br />
+              <input
+                type="text"
+                id="tag3"
+                name="tag3"
+                value=<?php GetUserData('tag3') ?>
+              /><br />
+              <!--<label for="email">Email:</label><br />
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="forky0731@toy.story"
-              /><br /><br />
-              <button type="button">Save Changes</button>
+                placeholder=
+              /><br />-->
+              <label for="bio">Bio:</label><br />
+              <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea><br />
+              <button type="submit">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
+              <br />
             </form>
           </div>
           <div id="change-password" class="setting-page">
@@ -105,15 +121,15 @@
                 id="confirm-password"
                 name="confirm-password"
               /><br /><br />
-              <button type="button">Save Changes</button>
+              <button type="submit">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
-          <div id="profile-info" class="setting-page">
+          <!--<div id="profile-info" class="setting-page">
             <h2>Profile Info</h2>
             <form>
               <label for="bio">Bio:</label><br />
-              <textarea id="bio" name="bio"></textarea><br />
+              <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea><br />
               <label for="birthday">Birthday:</label><br />
               <input type="date" id="birthday" name="birthday" /><br />
               <label for="country">Country:</label><br />
@@ -125,10 +141,10 @@
                 <option value="korea">Korea</option>
                 </select
               ><br /><br />
-              <button type="button">Save Changes</button>
+              <button type="submit">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
-          </div>
+          </div>-->
           <div id="notification" class="setting-page">
             <h2>Notifications</h2>
             <br>

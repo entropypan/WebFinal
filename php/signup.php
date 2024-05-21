@@ -42,7 +42,7 @@ if ($pass == 0){
         $uId = uniqid("u");
         $passwd_hash = password_hash($passwd_post, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO $tableName(ID,name,mail,password) VALUES('" . $uId . "','" . $name_post . "','" . $mail_post . "','" . $passwd_hash . "')";
+        $sql = "INSERT INTO $tableName(ID,name,mail,password,tag) VALUES('" . $uId . "','" . $name_post . "','" . $mail_post . "','" . $passwd_hash . "','" . $uId . "')";
         $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
         if ($result) {

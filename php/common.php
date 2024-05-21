@@ -1,5 +1,17 @@
 <?php
 
+/*$func_name = @$_POST['func_name'];
+$tb_name_post = @$_POST['tb_name_post'];
+$row_name_post = @$_POST['row_name_post'];
+$where_post = @$_POST['where_post'];
+$key_post = @$_POST['key_post'];
+
+if ($func_name == "updateData") {
+    $val_post = @$_POST['val_post'];
+    updateData($tb_name_post, $row_name_post, $val_post, $where_post, $key_post);
+}
+
+*/
 
 function checkHasData($tableName, $rowName, $_where, $_key)
 {

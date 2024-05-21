@@ -32,24 +32,21 @@
       <section id="mainProfile">
         <div id="idfollow" class="user-info">
           
-          <h1>@forky.0731</h1>
+          <h1><?php GetUserData('tag') ?></h1>
           
           <!-- <button>Follow</button> -->
         </div>
 
         
-        <h2>Forky</h2>
+        <h2><?php GetUserData('name') ?></h2>
         <!-- Bio -->
-        <p>
-          I am not a toy, I was made for soups, salads, maybe chili, and then
-          the trash.
-        </p>
+        <p><?php GetUserData('profile') ?></p>
         
         <h3>Interests</h3>
         <ul>
-          <li>#Landscape</li>
-          <li>#Life</li>
-          <li>#Cat</li>
+          <li>#<?php GetUserData('tag1') ?></li>
+          <li>#<?php GetUserData('tag2') ?></li>
+          <li>#<?php GetUserData('tag3') ?></li>
           
         </ul>
         
