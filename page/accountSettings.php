@@ -35,9 +35,9 @@
             <li>
               <a href="#" onclick="showSetting('change-password')">Change Password</a>
             </li>
-            <!--<li>
-              <a href="#" onclick="showSetting('profile-info')">Profile Info</a>
-            </li>-->
+            <li>
+              <a href="#" onclick="showSetting('profile-info')">User Avatar</a>
+            </li>
             <li>
               <a href="#" onclick="showSetting('notification')">Notifications</a>
             </li>
@@ -48,21 +48,7 @@
             <h2>General</h2>
 
             <form from method="POST" action="../php/setting.php">
-              <div class="user-avatar">
-
-                <?php if(GetData('imgf') == 0) : ?>
-                  <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
-                <?php else : ?>
-                  <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
-                <?php endif; ?>
-
-                <input type="hidden" name="imagestring">
-                
-                <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-                
-                <img id="show_image" src="">          
-                <br />
-              </div>
+              
               <label for="username">Username:</label><br />
               <input
                 type="text"
@@ -109,14 +95,14 @@
               <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea>
               <br />
 
-              <button type="submit" style="background-color: #8c8c8c">Save Changes</button>
+              <button type="submit" style="background-color: #0e0e0e">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
               <br />
             </form>
           </div>
           <div id="change-password" class="setting-page">
             <h2>Change Password</h2>
-            <form>
+            <form from method="POST" action="../php/changepasswd.php">
               <label for="current-password">Current Password:</label><br />
               <input
                 type="password"
@@ -135,13 +121,29 @@
                 id="confirm-password"
                 name="confirm-password"
               /><br /><br />
-              <button type="submit">Save Changes</button>
+              <button type="submit" style="background-color: #0e0e0e">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
-          <!--<div id="profile-info" class="setting-page">
-            <h2>Profile Info</h2>
-            <form>
+          <div id="profile-info" class="setting-page">
+            <h2>User Avatar</h2>
+            <form from method="POST" action="../php/avatar.php">
+            <div class="user-avatar">
+
+              <?php if(GetData('imgf') == 0) : ?>
+                <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+              <?php else : ?>
+                <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
+              <?php endif; ?>
+
+              <input type="hidden" name="imagestring">
+
+              <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
+
+              <img id="show_image" src="">          
+              <br />
+            </div>
+            <!--
               <label for="bio">Bio:</label><br />
               <textarea id="bio" name="bio"></textarea><br />
               <label for="birthday">Birthday:</label><br />
@@ -155,10 +157,11 @@
                 <option value="korea">Korea</option>
                 </select
               ><br /><br />
-              <button type="submit">Save Changes</button>
+            -->
+              <button type="submit" style="background-color: #0e0e0e">Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
-          </div>-->
+          </div>
           <div id="notification" class="setting-page">
             <h2>Notifications</h2>
             <br>
@@ -181,7 +184,7 @@
               />
               <label for="product-updates">Weekly product updates</label
               ><br /><br />
-              <button type="button">Save Changes</button>
+              <button type="submit" >Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
