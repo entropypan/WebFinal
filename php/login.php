@@ -1,5 +1,5 @@
 <?php
-//登入
+
 require_once("../php/connectDB.php");
 $tablename = "users";
 mysqli_query($conn, 'SET NAMES utf8');

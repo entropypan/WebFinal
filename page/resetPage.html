@@ -6,13 +6,13 @@
     <link href="../css/resetStyle.css" rel="stylesheet" />
     <title>Reset Password</title>
   </head>
-  <body style="background-image: url(reset.jpg)">
+  <body style="background-image: url(../AllPhotos/reset.jpg)">
     <div class="reset_page">
       <div id="container">
         <div class="reset">
           <h3>Reset Account Password</h3>
 
-          <form action="php位址">
+          <form method="POST" action="../php/forgotpasswd.php">
             <label for="password">New Password</label>
             <input required type="password" id="password" name="password" />
             <div class="field"></div>
@@ -26,6 +26,11 @@
             <div class="field"></div>
 
             <button type="submit">Reset Password</button>
+
+            <br/><br/>
+            <div class="login">
+              <a href="../page/loginPage.html" alt="led to login page">Back to Login</a>
+            </div>
           </form>
         </div>
       </div>
