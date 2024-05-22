@@ -9,6 +9,7 @@ mysqli_query($conn, 'SET NAMES utf8');
 $passwd_post = $_POST['password'];
 $check_post = $_POST['newPassword'];
 $mail_post = $_COOKIE['email'];
+setcookie("email", "", time());
 
 if ($passwd_post == $check_post) {
     $passwd_hash = password_hash($passwd_post, PASSWORD_DEFAULT);
