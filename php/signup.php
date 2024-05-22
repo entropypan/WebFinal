@@ -1,6 +1,4 @@
 <?php
-//註冊
-
 require_once("../php/connectDB.php");
 require_once("../php/common.php");
 $tableName = "users";
