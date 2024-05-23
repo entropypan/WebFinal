@@ -24,15 +24,15 @@ h1 {
 }
 
 /* 左側設定欄樣式 */
-  aside {
-    width: 200px;
-    background-color: #fffefe;
-    padding: 35px;
-    overflow-y: auto;
-    position: fixed;
-    top: 110px;
-    left: 0;
-  }
+aside {
+  width: 200px;
+  background-color: #fffefe;
+  padding: 35px;
+  overflow-y: auto;
+  position: fixed;
+  top: 110px;
+  left: 0;
+}
 
 h2 {
   margin-top: 15px !important; /* 清除標題頂部外距 */
@@ -100,6 +100,30 @@ li {
   background-color: #0056b3;
 }
 
+.posts {
+  margin-top: 135px;
+  margin-left: 300px;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  
+  
+}
+
+/*.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 100px;
+}*/
+
+.posts img {
+  width: calc(100% - 120px );
+  margin: 10px;
+  border-radius: 5px;
+}
+
 /* 貼文部分樣式 */
 .card {
   width: 400px;
@@ -114,8 +138,8 @@ li {
   flex-direction: column; 
 }
 
-.card:before {
-  content: ''; /* 分隔線 */
+/*.card:before {
+  content: ''; 
   position: absolute; 
   top: 85%;
   left: 0; 
@@ -124,7 +148,7 @@ li {
   background-color: #000000;
   z-index: 1;
 }
-
+*/
 .card-title {
   position: absolute;
   bottom: 10px;
@@ -139,7 +163,8 @@ li {
 }   
 
 /* 橋位置 */
-.card1 {
+
+/*.card1 {
   position: absolute;
   top: 140px;
   left: 220px; 
@@ -174,3 +199,4 @@ li {
   top: 450px;
   margin-left: 1080px;
 }
+*/
