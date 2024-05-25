@@ -138,17 +138,17 @@ li {
   flex-direction: column; 
 }
 
-/*.card:before {
+.card:before {
   content: ''; 
   position: absolute; 
-  top: 85%;
+  top: 15%;
   left: 0; 
   width: 100%;
   height: 1px; 
   background-color: #000000;
   z-index: 1;
 }
-*/
+
 .card-title {
   position: absolute;
   bottom: 10px;

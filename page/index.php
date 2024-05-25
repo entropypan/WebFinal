@@ -84,7 +84,7 @@
     <div class="posts">
       
         <div class="card">
-          <img src="../Allphotos/cat.jpg" class="card-img-top" alt="photo.jpg" />
+          <img src="../Allphotos/cat.png" class="card-img-top" alt="photo.jpg" />
           <div class="card-body">
             <h5 class="card-title">The Cat Within My Gaze...</h5>
             <a href="../page/discussion.php" class="joinbutton">Join</a>
