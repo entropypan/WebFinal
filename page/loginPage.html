@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/loginStyle.css" rel="stylesheet" />
+    <title>Account Login</title>
+  </head>
+  <body style="background-image: url(../Allphotos/login.jpg)">
+    <div class="loginPart">
+      <div id="container">
+        <div class="login">
+          <h3>Sign in</h3>
+
+          <form method="POST" action="../php/login.php">
+            <input
+              required
+              type="text"
+              id="mail_input"
+              name="mail_input"
+              placeholder="Email"
+            />
+            <div class="field"></div>
+            <input
+              required
+              type="password"
+              id="password_input"
+              name="password_input"
+              placeholder="Password"
+            />
+            <div class="field"></div>
+            <button type="submit">Login</button>
+          </form>
+
+          <a href="../page/forgotPassword.html" alt="led to forgot password page"
+            ><h5>Forgot Password</h5></a
+          >
+        </div>
+        <!-- login end-->
+
+        <div class="signup">
+          <h5>
+            Don't have an account?
+            <a href="../page/signUpPage.html" alt="led to sign up page">Sign up</a>
+          </h5>
+        </div>
+      </div>
+      <!-- container end-->
+    </div>
+    <!-- loginPart end-->
+  </body>
+</html>

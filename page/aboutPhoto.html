@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/aboutStyle.css" rel="stylesheet" />
+    <title>About Photos</title>
+  </head>
+  <body>
+    <div class="post">
+      <div class="post-photo">
+        <img src="../Allphotos/toy3.jpg" alt="Post Photo" />
+      </div>
+      <div class="post-details">
+        <div class="user-info">
+          <img src="../Allphotos/forky.jpg" alt="User Avatar" />
+          <h3>User Name</h3>
+        </div>
+        <div class="post-content">
+          <h2>Discussion Title</h2>
+          <p>Camera:</p>
+          <p>Location:</p>
+          <p>Time:</p>
+        </div>
+        <div class="post-actions">
+          <button class="like-button">
+            <img src="../Allphotos/like.png" alt="Like" class="default-image" />
+            <img src="../Allphotos/liked.png" alt="Liked" class="clicked-image" />
+          </button>
+          <button class="saved-button">
+            <img src="../Allphotos/save.png" alt="Save" class="default-image" />
+            <img src="../Allphotos/saved.png" alt="Saved" class="clicked-image" />
+          </button>
+          <button class="follow-button">
+            <img
+              src="../Allphotos/follow.png"
+              alt="Follow"
+              class="default-image"
+            />
+            <img
+              src="../Allphotos/following.png"
+              alt="Following"
+              class="clicked-image"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const likeButton = document.querySelector(".like-button");
+      const savedButton = document.querySelector(".saved-button");
+      const followButton = document.querySelector(".follow-button");
+
+      let isLikeClicked = false;
+      let isSavedClicked = false;
+      let isFollowClicked = false;
+
+      function toggleButton(button, isClicked) {
+        const defaultImage = button.querySelector(".default-image");
+        const clickedImage = button.querySelector(".clicked-image");
+
+        if (isClicked) {
+          defaultImage.style.display = "none";
+          clickedImage.style.display = "block";
+        } else {
+          defaultImage.style.display = "block";
+          clickedImage.style.display = "none";
+        }
+      }
+
+      likeButton.addEventListener("click", function () {
+        isLikeClicked = !isLikeClicked;
+        toggleButton(this, isLikeClicked);
+      });
+
+      savedButton.addEventListener("click", function () {
+        isSavedClicked = !isSavedClicked;
+        toggleButton(this, isSavedClicked);
+      });
+
+      followButton.addEventListener("click", function () {
+        isFollowClicked = !isFollowClicked;
+        toggleButton(this, isFollowClicked);
+      });
+    });
+  </script>
+</html>
