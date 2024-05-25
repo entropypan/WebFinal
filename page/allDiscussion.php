@@ -30,18 +30,18 @@
 
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         /><img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
       </div>
@@ -55,11 +55,11 @@
 
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
       </div>
@@ -73,15 +73,15 @@
 
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
       </div>

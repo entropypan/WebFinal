@@ -31,23 +31,23 @@
     <!-- 上傳上來的照片 -->
     <div class="uploaded-images">
       <img
-        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
+        src="../Allphotos/forky.jpg"
         alt="Photo1"
       />
       <img
-        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
+        src="../Allphotos/forky.jpg"
         alt="Photo2"
       />
       <img
-        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
+        src="../Allphotos/forky.jpg"
         alt="Photo3"
       />
       <img
-        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
+        src="../Allphotos/forky.jpg"
         alt="Photo4"
       />
       <img
-        src="https://fastcdn.hoyoverse.com/content-v2/hk4e/123537/6263f8a695cb55f3e5e2462e5225f8f5_5368633048796553514.jpg"
+        src="../Allphotos/forky.jpg"
         alt="Cat 5"
       />
     </div>
