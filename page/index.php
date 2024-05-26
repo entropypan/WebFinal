@@ -82,7 +82,7 @@
     <!-- 主題區 -->
     <!-- 1 -->
     <div class="container">
-      
+      <!---->
       <div class="card">
         <img src="../Allphotos/cat.png" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
@@ -93,42 +93,42 @@
       <div class="card">
         <img src="../Allphotos/buzz.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 2</h5>
+          <h5 class="card-title">Buzz</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
       <div class="card">
         <img src="../Allphotos/forgot.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 3</h5>
+          <h5 class="card-title">Lazy Cat</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
       <div class="card">
         <img src="../Allphotos/forky.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 4</h5>
+          <h5 class="card-title">Forky</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
       <div class="card">
         <img src="../Allphotos/VFD.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 5</h5>
+          <h5 class="card-title">VFD</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
       <div class="card">
         <img src="../Allphotos/slinky.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 6</h5>
+          <h5 class="card-title">Slinky</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
       <div class="card">
-        <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/monster1.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
-          <h5 class="card-title">Title 7</h5>
+          <h5 class="card-title">Monsters</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
