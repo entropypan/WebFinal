@@ -112,7 +112,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="../Allphotos/monster.jpg" class="card-img-top" alt="photo.jpg" />
+        <img src="../Allphotos/VFD.jpg" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
           <h5 class="card-title">Title 5</h5>
           <a href="../page/discussion.php" class="joinbutton">Join</a>

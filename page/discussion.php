@@ -31,23 +31,23 @@
     <!-- 上傳上來的照片 -->
     <div class="uploaded-images">
       <img
-        src="../Allphotos/forky.jpg"
+        src="../Allphotos/VFD.jpg"
         alt="Photo1"
       />
       <img
-        src="../Allphotos/forky.jpg"
+        src="../Allphotos/cat.png"
         alt="Photo2"
       />
       <img
-        src="../Allphotos/forky.jpg"
+        src="../Allphotos/buzz.jpg"
         alt="Photo3"
       />
       <img
-        src="../Allphotos/forky.jpg"
+        src="../Allphotos/reset.jpg"
         alt="Photo4"
       />
       <img
-        src="../Allphotos/forky.jpg"
+        src="../Allphotos/VFD.jpg"
         alt="Cat 5"
       />
     </div>
