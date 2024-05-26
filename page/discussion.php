@@ -16,7 +16,6 @@
         echo "<script>location.href='../page/loginPage.html'</script>";
     }*/
     $tpc = $_GET["topic"];
-    setcookie('topic', $tpc);
     ?>
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
@@ -38,7 +37,7 @@
       <a id="uploadButton" href="../page/CreatePage.php?topic=<?php echo ($tpc) ?>">Upload my Response</a>
     </div>
 
-    <!-- 上傳上來的照片 -->
+    <!-- 上傳上來的照片 
     <div class="uploaded-images">
       <img
         src="../Allphotos/VFD.jpg"
@@ -60,6 +59,22 @@
         src="../Allphotos/VFD.jpg"
         alt="Cat 5"
       />
+    </div>-->
+    <div class="uploaded-images">
+    <?php 
+    $sql = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        ?>
+        <img
+          src="<?php echo ($row['pic']) ?>"
+          alt="Cat 5"
+        />
+        <?php
+        }
+      }
+    ?>
     </div>
   </body>
 </html>
