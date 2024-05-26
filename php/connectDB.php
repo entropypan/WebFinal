@@ -1,7 +1,7 @@
 <?php
 $serverName = "localhost";
 $username = "root";
-$password = "148963";
+$password = "5253";
 
 // temp
 $dbname = "yesy";

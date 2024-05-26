@@ -22,8 +22,9 @@
           <div class="upload-section">
             <label for="photo">Photo:</label>
             <input type="file" id="upload-photo" accept="image/*" />
-          </div>
+          </div><br />
           <label for="upload-photo" id="upload-label">Upload your photo</label>
+          <br />
           <label for="equipment">Equipment:</label><br />
           <input
             type="text"

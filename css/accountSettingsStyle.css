@@ -93,25 +93,37 @@ body {
 }
 
 .user-avatar {
+  height: 100px;
+  width: 400px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.user-avatar img{
+  margin-right: 10px;
+  width: 100px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  -webkit-print-color-adjust: exact;
+  display: inline-block;
+}
+
+.preview img{
+  margin-left: 10px;
+  width: 100px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  -webkit-print-color-adjust: exact;
+  display: inline-block;
 }
 
 .setting-page h2 {
   color: #333;
 }
 
-.setting-page img {
-  width: 100px;
-  /*height: 100px;*/
-  /*background-image: url("../AllPhotos/forgot.jpg");*/
-  border-radius: 50%;
-  margin-right: 20px;
-  aspect-ratio: 1/1;
-  background-size: cover;
-  background-position: center;
-}
 
 .setting-page form {
   max-width: 360px;

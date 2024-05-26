@@ -8,18 +8,26 @@ if (!(isset($_SESSION))) {
 $tablename = "users";
 mysqli_query($conn, 'SET NAMES utf8');
 $imagestring = trim($_REQUEST["imagestring"]);
-$uID = $_SESSION["ID"];
-$sql = "UPDATE $tablename SET 
-        img='$imagestring',
-        imgf=1
-        WHERE ID='$uID'";
-$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-if ($result) {
-    // 成功
-    echo "<script>alert('Successed')</script>";
+
+
+if ($imagestring == ""){
     echo "<script>location.href='../page/accountSettings.php'</script>";
+    
 } else {
-    // 失敗
-    echo "<script>location.href='../page/accountSettings.php'</script>";
-    echo ("Faild");
+    $uID = $_SESSION["ID"];
+    $sql = "UPDATE $tablename SET 
+            img='$imagestring',
+            imgf=1
+            WHERE ID='$uID'";
+    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    if ($result) {
+        // 成功
+        echo "<script>alert('Successed')</script>";
+        echo "<script>location.href='../page/accountSettings.php'</script>";
+    } else {
+        // 失敗
+        echo "<script>alert('Failed')</script>";
+        echo "<script>location.href='../page/accountSettings.php'</script>";
+        
+    }
 }

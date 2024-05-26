@@ -14,6 +14,8 @@
     <!--檢查登入-->
     <?php
     require("../php/autoLogin.php");
+    require("../php/connectDB.php");
+    require("../php/common.php");
     ?>
 
     <header>
@@ -82,100 +84,77 @@
     <!-- 主題區 -->
     <!-- 1 -->
     <div class="container">
-      
-        <div class="card">
-          <img src="../AllPhotos/forgot.jpg" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">The Cat Within My Gaze...</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      <!--
+      <div class="card">
+        <img src="../Allphotos/cat.png" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">The Cat Within My Gaze...</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-
-      <!-- 2 -->
-      
-        <div class="card">
-          <img src="../AllPhotos/buzz.jpg" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 2</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/buzz.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">Buzz</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-      
-      <!-- 3 -->
-      
-        <div class="card">
-          <img src="" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 3</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/forgot.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">Lazy Cat</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-      
-      <!-- 4 -->
-
-        <div class="card">
-          <img src="" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 4</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/forky.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">Forky</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-
-      <!-- 5 -->
-
-        <div class="card">
-          <img src="" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 5</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/VFD.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">VFD</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-
-      <!-- 6 -->
-        <div class="card">
-          <img src="" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 6</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/slinky.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">Slinky</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-
-
-        <div class="card">
-          <img src="" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 7</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
+      </div>
+      <div class="card">
+        <img src="../Allphotos/monster1.jpg" class="card-img-top" alt="photo.jpg" />
+        <div class="card-body">
+          <h5 class="card-title">Monsters</h5>
+          <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
-
-      
-
-        <div class="card">
-          <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 8</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
+      </div>
+      -->
+      <?php
+      $sql = "SELECT * FROM posts ORDER BY PID ASC";
+      $result = $conn->query($sql);
+      // echo "<script>alert('$result->num_rows')</script>";
+      if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          ?>
+          <div class="card">
+            <img src="<?php echo ($row['photo']) ?>" class="card-img-top" alt="photo.jpg" />
+            <div class="card-body">
+              <h5 class="card-title"><?php echo ($row['topic']) ?></h5>
+              <a href="../page/discussion.php?topic=<?php echo ($row['topic']) ?>" class="joinbutton">Join</a>
+            </div>
           </div>
-        </div>
+          <?php
+        }
+      }
 
 
-        <div class="card">
-          <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 9</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <img src="../Allphotos/photo.jpg" class="card-img-top" alt="photo.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">Title 10</h5>
-            <a href="../page/discussion.php" class="joinbutton">Join</a>
-          </div>
-        </div>
+      ?>
 
     </div>
   </body>

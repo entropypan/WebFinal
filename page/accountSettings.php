@@ -131,7 +131,7 @@
             <div class="user-avatar">
 
               <?php if(GetData('imgf') == 0) : ?>
-                <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+                <img id="test" src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
               <?php else : ?>
                 <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
               <?php endif; ?>
@@ -140,7 +140,10 @@
 
               <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
 
-              <img id="show_image" src="">          
+              <div class="preview">
+                <img id="show_image" src="">
+              </div>
+
               <br />
             </div>
             <!--
