@@ -14,6 +14,8 @@
     <!--檢查登入-->
     <?php
     require("../php/autoLogin.php");
+    require("../php/connectDB.php");
+    require("../php/common.php");
     ?>
 
     <header>
@@ -82,7 +84,7 @@
     <!-- 主題區 -->
     <!-- 1 -->
     <div class="container">
-      <!---->
+      <!--
       <div class="card">
         <img src="../Allphotos/cat.png" class="card-img-top" alt="photo.jpg" />
         <div class="card-body">
@@ -132,10 +134,24 @@
           <a href="../page/discussion.php" class="joinbutton">Join</a>
         </div>
       </div>
-      <!---->
+      -->
       <?php
-
-
+      $sql = "SELECT * FROM posts ORDER BY PID ASC";
+      $result = $conn->query($sql);
+      // echo "<script>alert('$result->num_rows')</script>";
+      if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          ?>
+          <div class="card">
+            <img src="<?php echo ($row['photo']) ?>" class="card-img-top" alt="photo.jpg" />
+            <div class="card-body">
+              <h5 class="card-title"><?php echo ($row['topic']) ?></h5>
+              <a href="../page/discussion.php?topic=<?php echo ($row['topic']) ?>" class="joinbutton">Join</a>
+            </div>
+          </div>
+          <?php
+        }
+      }
 
 
       ?>
