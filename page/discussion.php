@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="../css/discussionStyle.css" />
   </head>
   <body>
-
+    <?php 
+    require("../php/autoLogin.php");
+    require("../php/connectDB.php");
+    require("../php/common.php"); 
+    /*if(!isset($_SESSION['ID'])){
+        echo "<script>alert('請先登入')</script>";
+        echo "<script>location.href='../page/loginPage.html'</script>";
+    }*/
+    $tpc = $_GET["topic"];
+    setcookie('topic', $tpc);
+    ?>
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -25,7 +35,7 @@
       <!-- 標題 -->
       <h1>The Cat Within My Gaze...</h1>
 
-      <a id="uploadButton" href="../page/CreatePage.php">Upload my Response</a>
+      <a id="uploadButton" href="../page/CreatePage.php?topic=<?php echo ($tpc) ?>">Upload my Response</a>
     </div>
 
     <!-- 上傳上來的照片 -->

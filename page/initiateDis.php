@@ -33,15 +33,10 @@
         <label for="photo">Photo:</label><br />
         <form id="info-form">
           <div class="upload-section">
-            
-            
             <input type="hidden" name="imagestring">
-
             <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-
             <img id="show_image" src="">
           </div><br />
-          
           <br />
           <label for="equipment">Equipment:</label><br />
           <input
