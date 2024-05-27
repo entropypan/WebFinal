@@ -23,7 +23,7 @@ if ($imagestring == ""){
     if ($result) {
         // 成功
         echo "<script>alert('Successed')</script>";
-        echo "<script>location.href='../page/accountSettings.php'</script>";
+        echo "<script>location.href='../page/profile.php'</script>";
     } else {
         // 失敗
         echo "<script>alert('Failed')</script>";

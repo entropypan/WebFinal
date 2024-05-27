@@ -36,23 +36,24 @@ if ($passwd_post != $confirm_post) {
 
 // 都沒問題就註冊
 if ($pass == 0){
-    if ($result->num_rows == 0) {
+    /*if ($result->num_rows == 0) {*/
         $uId = uniqid("u");
+        $tag = uniqid("t");
         $passwd_hash = password_hash($passwd_post, PASSWORD_DEFAULT);
-
-        $sql = "INSERT INTO $tableName(ID,name,mail,password,tag) VALUES('" . $uId . "','" . $name_post . "','" . $mail_post . "','" . $passwd_hash . "','" . $uId . "')";
+        $sql = "INSERT INTO $tableName(ID,name,mail,password,tag) 
+                VALUES('$uId','$name_post','$mail_post','$passwd_hash','$tag')";
         $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
         if ($result) {
             // 成功
             echo "<script>alert('Enroll Successed')</script>";
-            echo "<script>location.href='../index.php'</script>";
+            echo "<script>location.href='../page/loginPage.html'</script>";
         } else {
             // 失敗
+            echo "<script>alert('Enroll Failed')</script>";
             echo "<script>location.href='../index.php'</script>";
-            echo ("Enroll Faild");
         }
-    }
+    /*}*/
 }
 
 $conn->close();

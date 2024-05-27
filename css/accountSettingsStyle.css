@@ -106,7 +106,7 @@ body {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  -webkit-print-color-adjust: exact;
+  /*-webkit-print-color-adjust: exact;*/
   display: inline-block;
 }
 
@@ -116,7 +116,7 @@ body {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  -webkit-print-color-adjust: exact;
+  /*-webkit-print-color-adjust: exact;*/
   display: inline-block;
 }
 

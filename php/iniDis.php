@@ -25,7 +25,7 @@ if($pass == 0){
     $time_post = $_POST["time"];
     $loc_post = $_POST["location"];
     $pic = trim($_REQUEST["imagestring"]);
-    $atr = GetData("tag");
+    $atr = GetData("ID");
     $sql = "INSERT INTO posts(author,topic,photo) 
             VALUES ('$atr','$topic','$pic')";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
@@ -40,12 +40,12 @@ if($pass == 0){
             echo "<script>location.href='../index.php'</script>";
         } else {
             // 失敗
+            echo "<script>alert('Initiate Failed')</script>";
             echo "<script>location.href='../page/initiateDis.php'</script>";
-            echo ("Initiate Faild");
         }
     } else {
         // 失敗
+        echo "<script>alert('Initiate Failed')</script>";
         echo "<script>location.href='../page/initiateDis.php'</script>";
-        echo ("Initiate Faild");
     }
 }

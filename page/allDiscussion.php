@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../css/allDiscussionStyle.css" />
   </head>
   <body>
+    <?php
+      require("../php/autoLogin.php");
+      require("../php/connectDB.php");
+      require("../php/common.php");
+    ?>
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -19,74 +24,95 @@
 
     <div class="title-container">
       <h1>All Discussions</h1>
-
       <!-- Upload my Response 按鈕 -->
       <a id="uploadButton" href="../page/initiateDis.php">Initiate A Discussion</a>
     </div>
 
-    <!-- 區塊1 -->
+    <!-- 區塊1
     <div class="discussion-block">
       <h2>The Cat Within My Gaze...</h2>
-
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         /><img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
       </div>
-
       <a href="../page/discussion.php" class="more-link">...more</a>
     </div>
-
-    <!-- 區塊2 -->
     <div class="discussion-block">
       <h2>Discussion Topic 2</h2>
 
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
       </div>
-
       <a href="../page/discussion2.html" class="more-link">...more</a>
     </div>
-
-    <!-- 區塊3 -->
     <div class="discussion-block">
       <h2>Discussion Topic 3</h2>
-
       <div class="photos">
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
         <img
-          src="https://www.pexels.com/photo/animal-cute-cat-kitten-45201/"
+          src="../Allphotos/forky.jpg"
           alt="Photo3"
         />
         <img
-          src="https://www.pexels.com/photo/close-up-photography-of-gray-tabby-cat-1048274/"
+          src="../Allphotos/forky.jpg"
           alt="Photo2"
         />
       </div>
-
       <a href="../page/discussion3.html" class="more-link">...more</a>
     </div>
+    -->
+    <?php
+      $sql = "SELECT * FROM posts ORDER BY PID ASC";
+      $result = $conn->query($sql);
+      // echo "<script>alert('$result->num_rows')</script>";
+      if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          ?>
+          <div class="discussion-block">
+            <h2><?php echo ($row['topic']) ?></h2>
+            <div class="photos">
+              <?php
+              $tpc = $row['topic']; 
+              $sql2 = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
+              $result2 = $conn->query($sql2);
+              $cnt = 0;
+              while(($row2 = $result2->fetch_assoc()) && $cnt < 4) {
+                ?>
+                  <img src="<?php echo ($row2['pic']) ?>" />
+                <?php
+                $cnt = $cnt+1;
+              }
+              ?>
+            </div>
+            <a href="discussion.php?topic=<?php echo ($row['topic']) ?>" class="more-link">...more</a>
+          </div>
+          <?php
+        }
+      }
+    ?>
+
   </body>
 </html>

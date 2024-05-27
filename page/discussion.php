@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="../css/discussionStyle.css" />
   </head>
   <body>
-
+    <?php 
+    require("../php/autoLogin.php");
+    require("../php/connectDB.php");
+    require("../php/common.php"); 
+    /*if(!isset($_SESSION['ID'])){
+        echo "<script>alert('請先登入')</script>";
+        echo "<script>location.href='../page/loginPage.html'</script>";
+    }*/
+    $tpc = $_GET["topic"];
+    ?>
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -25,13 +34,13 @@
       <!-- 標題 -->
       <h1>The Cat Within My Gaze...</h1>
 
-      <a id="uploadButton" href="../page/CreatePage.php">Upload my Response</a>
+      <a id="uploadButton" href="../page/CreatePage.php?topic=<?php echo ($tpc) ?>">Upload my Response</a>
     </div>
 
-    <!-- 上傳上來的照片 -->
+    <!-- 上傳上來的照片 
     <div class="uploaded-images">
       <img
-        src="../Allphotos/test.png"
+        src="../Allphotos/VFD.jpg"
         alt="Photo1"
       />
       <img
@@ -47,9 +56,25 @@
         alt="Photo4"
       />
       <img
-        src="../Allphotos/test(1).png"
+        src="../Allphotos/VFD.jpg"
         alt="Cat 5"
       />
+    </div>-->
+    <div class="uploaded-images">
+    <?php 
+    $sql = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        ?>
+        <img
+          src="<?php echo ($row['pic']) ?>"
+          alt="Cat 5"
+        />
+        <?php
+        }
+      }
+    ?>
     </div>
   </body>
 </html>

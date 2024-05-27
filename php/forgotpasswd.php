@@ -21,8 +21,8 @@ if ($passwd_post == $check_post) {
         echo "<script>location.href='../page/loginPage.html'</script>";
     } else {
         // 失敗
+        echo "<script>alert('Failed')</script>";
         echo "<script>location.href='../page/forgotPassword.html'</script>";
-        echo ("Faild");
     }
 } else {
     echo "<script>alert('兩次密碼不同')</script>";

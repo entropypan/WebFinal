@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picruise</title>
   <link rel="stylesheet" href="../css/initiateDis.css">
-  <link rel="stylesheet" href="../css/CreatePage.css">
 </head>
 <body style="background-image: url(../Allphotos/createback.jpg)">
 
@@ -33,16 +32,15 @@
         <label for="photo">Photo:</label><br />
         <form id="info-form">
           <div class="upload-section">
-            
-            
             <input type="hidden" name="imagestring">
-
             <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-
-            <img id="show_image" src="">
-          </div><br />
-          
-          <br />
+            <br/>
+            <div class="preview1">
+              <img id="show_image" src="">
+            </div>
+          </div>
+          <br/>
+          <br/>
           <label for="equipment">Equipment:</label><br />
           <input
             type="text"
