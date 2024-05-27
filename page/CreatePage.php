@@ -74,26 +74,18 @@
   <script>
     var imageProc = function (input) {
       if (input.files && input.files[0]) {
-        // 建立一個 FileReader 物件
         var reader = new FileReader();
-
-        // 當檔案讀取完後，所要進行的動作
         reader.onload = function (e) {
-          // 顯示圖片
           $('#show_image')
           .attr("src", e.target.result)
           .css("display","inline-block")
-          
-          // 將 DataURL 放到表單中
           $("input[name='imagestring']").val(e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
-
       }
     }
-
     $(document).ready(function() {
-      // 綁定事件
+
       $("#previewImage").change(function () {
         imageProc(this);
       });
