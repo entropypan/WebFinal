@@ -52,7 +52,7 @@
               }
               ?>
             </div>
-            <a href="discussion.php?topic=<?php echo ($row['topic']) ?>" class="more-link">...more</a>
+            <a href="../page/discussion.php?topic=<?php echo ($row['topic']) ?>" class="more-link">...more</a>
           </div>
           <?php
         }

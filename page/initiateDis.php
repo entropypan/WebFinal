@@ -33,8 +33,8 @@
         <label for="photo">Photo:</label><br />
         <form id="info-form">
           <div class="upload-section">
-            <input type="hidden" name="imagestring">
-            <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
+            <input type="hidden" name="imagestring" required="required">
+            <input accept="image/*" id="previewImage" alt="User Avatar" type="file" required="required">
             <div class="preview">
               <img id="show_image" src="">
             </div>
@@ -45,6 +45,7 @@
             type="text"
             id="equipment"
             name="equipment"
+            required="required"
             placeholder="Fujifilm X-T4"
           /><br />
           <label for="time">Time:</label><br />

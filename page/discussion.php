@@ -38,7 +38,7 @@
       <a id="uploadButton" href="../page/CreatePage.php?topic=<?php echo ($tpc) ?>">Upload my Response</a>
     </div>
 
-    <!-- 動態呈現各回復 -->
+    <!-- 動態呈現各回覆 -->
     <div class="uploaded-images">
     <?php 
     $sql = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";

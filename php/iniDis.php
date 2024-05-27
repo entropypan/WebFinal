@@ -18,8 +18,6 @@ if (checkHasData("posts", "topic", "topic", $topic)) {
     $pass = 1;
 }
 
-
-
 if($pass == 0){
     $equip_post = $_POST["equipment"];
     $time_post = $_POST["time"];
