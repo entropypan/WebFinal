@@ -34,8 +34,8 @@
           <div class="upload-section">
             <input type="hidden" name="imagestring">
             <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-            <br/>
-            <div class="preview1">
+            
+            <div class="preview_2">
               <img id="show_image" src="">
             </div>
           </div>
