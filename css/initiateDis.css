@@ -1,57 +1,104 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-  }
-  
-  main {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
 
-  header {
-    text-align: center;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  
-  .info-section {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 280px;
-    margin-left: 0;
-  }
-  
-  #info-form input[type="text"] {
-    width: 400px;
-    padding: 12px;
-    margin-bottom: 25px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  #info-form input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #1f96e1;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #info-form input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+header {
+  text-align: center;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 照片和資料區 */
+.info-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+/* 上傳照片按鈕樣式 */
+#upload-photo {
+  display: none;
+  margin-top: 50px;
+}
+
+#upload-label {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.preview img {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: contain;
+  /*-webkit-print-color-adjust: exact;*/
+  display: inline-block;
+}
+
+/* 表單樣式 */
+#info-form {
+  width: 40%;
+}
+
+#info-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#info-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#info-form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #1f96e1;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#info-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* 用戶上傳照片區域 */
+/* 上傳照片區 */
+.upload-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.upload-section label {
+  margin-right: 10px;
+}

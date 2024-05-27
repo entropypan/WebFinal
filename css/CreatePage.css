@@ -17,7 +17,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 /* 上傳照片按鈕樣式 */
@@ -35,11 +35,6 @@ main {
   box-sizing: border-box;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* 上傳照片區 */
-.uploaded-section {
-  margin-top: 20px;
 }
 
 .preview img {
@@ -88,7 +83,9 @@ main {
 }
 
 /* 用戶上傳照片區域 */
+/* 上傳照片區 */
 .upload-section {
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
