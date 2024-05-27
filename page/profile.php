@@ -8,7 +8,10 @@
   </head>
   <body>
 
-    <?php require("../php/autoLogin.php"); 
+    <?php 
+    require("../php/autoLogin.php");
+    require("../php/connectDB.php");
+    require("../php/common.php"); 
     if(!isset($_SESSION['ID'])) {
         echo "<script>alert('請先登入')</script>";
         echo "<script>location.href='../page/loginPage.html'</script>";
@@ -27,7 +30,11 @@
 
     <header>
       
-      <img src=<?php GetUserData('img') ?> alt="User Avatar" />
+      <?php if(GetData('imgf') == 0) : ?>
+        <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+      <?php else : ?>
+        <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
+      <?php endif; ?>
 
       <section id="mainProfile">
         <div id="idfollow" class="user-info">
@@ -53,19 +60,35 @@
       </section>
     </header>
 
-      <!--change-->
+      
       <section class="button">
         <button id="uploadedBtn">Uploaded Photos</button>
-        <button id="favoriteBtn">Saved Photos</button>
+        <button id="favoriteBtn">Settings</button>
       </section>
 
       
       <section id="uploadedPhotos">
         <div class="photo-container">
-          <img src="../Allphotos/woody.jpg" alt="Photo 1" />
+          <!--<img src="../Allphotos/woody.jpg" alt="Photo 1" />
           <img src="../Allphotos/buzz.jpg" alt="Photo 2" />
           <img src="../Allphotos/slinky.jpg" alt="Photo 3" />
-          <img src="../Allphotos/toy3.jpg" alt="Photo 4" />
+          <img src="../Allphotos/toy3.jpg" alt="Photo 4" />-->
+          <?php
+          $sql = "SELECT * FROM pics ORDER BY DID ASC";
+          $result = $conn->query($sql);
+          // echo "<script>alert('$result->num_rows')</script>";
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              if ($row['author'] == $_SESSION['ID']) {
+              ?>
+                <img src="<?php echo ($row['pic']) ?>" alt="Photo 2" />
+              <?php
+              }
+            }
+          }
+
+
+          ?>
           
         </div>
       </section>

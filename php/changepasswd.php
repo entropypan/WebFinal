@@ -32,8 +32,8 @@ if ($new_post == $check_post) {
                     echo "<script>location.href='../page/accountSettings.php'</script>";
                 } else {
                     // 失敗
+                    echo "<script>alert('Failed')</script>";
                     echo "<script>location.href='../page/accountSettings.php'</script>";
-                    echo ("Faild");
                 }
             }
             else {

@@ -16,7 +16,7 @@ $equip_post = $_POST["equipment"];
 $time_post = $_POST["time"];
 $loc_post = $_POST["location"];
 $pic = trim($_REQUEST["imagestring"]);
-$atr = GetData("tag");
+$atr = GetData("ID");
 $tpc = $_POST['topic'];
 
 if($pass == 0){
@@ -30,8 +30,8 @@ if($pass == 0){
         echo "<script>location.href='../index.php'</script>";
     } else {
         // 失敗
+        echo "<script>alert('Failed')</script>";
         echo "<script>location.href='../page/initiateDis.php'</script>";
-        echo ("Initiate Faild");
     }
 
 }

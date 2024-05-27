@@ -38,9 +38,9 @@
             <li>
               <a href="#" onclick="showSetting('profile-info')">User Avatar</a>
             </li>
-            <li>
+            <!--<li>
               <a href="#" onclick="showSetting('notification')">Notifications</a>
-            </li>
+            </li>-->
           </ul>
         </div>
         <div id="main-content">
@@ -162,6 +162,7 @@
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
+          <!--
           <div id="notification" class="setting-page">
             <h2>Notifications</h2>
             <br>
@@ -188,6 +189,7 @@
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
+          -->
         </div>
       </div>
     </div>
