@@ -43,7 +43,7 @@
     <?php 
     $sql = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
     $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
+    if (($result != false) && ($result->num_rows > 0)) {
       while($row = $result->fetch_assoc()) {
         ?>
 
