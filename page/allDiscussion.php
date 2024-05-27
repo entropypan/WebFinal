@@ -28,62 +28,7 @@
       <a id="uploadButton" href="../page/initiateDis.php">Initiate A Discussion</a>
     </div>
 
-    <!-- 區塊1
-    <div class="discussion-block">
-      <h2>The Cat Within My Gaze...</h2>
-      <div class="photos">
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo2"
-        />
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo3"
-        /><img
-          src="../Allphotos/forky.jpg"
-          alt="Photo2"
-        />
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo3"
-        />
-      </div>
-      <a href="../page/discussion.php" class="more-link">...more</a>
-    </div>
-    <div class="discussion-block">
-      <h2>Discussion Topic 2</h2>
-
-      <div class="photos">
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo2"
-        />
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo3"
-        />
-      </div>
-      <a href="../page/discussion2.html" class="more-link">...more</a>
-    </div>
-    <div class="discussion-block">
-      <h2>Discussion Topic 3</h2>
-      <div class="photos">
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo2"
-        />
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo3"
-        />
-        <img
-          src="../Allphotos/forky.jpg"
-          alt="Photo2"
-        />
-      </div>
-      <a href="../page/discussion3.html" class="more-link">...more</a>
-    </div>
-    -->
+    <!-- 動態呈現討論區 -->
     <?php
       $sql = "SELECT * FROM posts ORDER BY PID ASC";
       $result = $conn->query($sql);
@@ -101,7 +46,7 @@
               $cnt = 0;
               while(($row2 = $result2->fetch_assoc()) && $cnt < 4) {
                 ?>
-                  <img src="<?php echo ($row2['pic']) ?>" />
+                <img src="<?php echo ($row2['pic']) ?>" />
                 <?php
                 $cnt = $cnt+1;
               }

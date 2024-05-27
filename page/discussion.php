@@ -38,29 +38,7 @@
       <a id="uploadButton" href="../page/CreatePage.php?topic=<?php echo ($tpc) ?>">Upload my Response</a>
     </div>
 
-    <!-- 上傳上來的照片 
-    <div class="uploaded-images">
-      <img
-        src="../Allphotos/VFD.jpg"
-        alt="Photo1"
-      />
-      <img
-        src="../Allphotos/cat.png"
-        alt="Photo2"
-      />
-      <img
-        src="../Allphotos/buzz.jpg"
-        alt="Photo3"
-      />
-      <img
-        src="../Allphotos/reset.jpg"
-        alt="Photo4"
-      />
-      <img
-        src="../Allphotos/VFD.jpg"
-        alt="Cat 5"
-      />
-    </div>-->
+    <!-- 動態呈現各回復 -->
     <div class="uploaded-images">
     <?php 
     $sql = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
