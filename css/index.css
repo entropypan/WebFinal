@@ -103,7 +103,7 @@ li {
 .container { 
   width: 1300px;
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin-left: 200px;
 

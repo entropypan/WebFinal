@@ -38,14 +38,16 @@ main {
 }
 
 /* 上傳照片區 */
-.uploaded-photo {
+.uploaded-section {
   margin-top: 20px;
 }
 
-.uploaded-photo img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+.preview img {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: contain;
+  /*-webkit-print-color-adjust: exact;*/
+  display: inline-block;
 }
 
 /* 表單樣式 */
