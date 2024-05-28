@@ -47,10 +47,12 @@
       while($row = $result->fetch_assoc()) {
         ?>
 
+        <a href="../page/aboutPhoto.php?DID=<?php echo ($row['DID']) ?>">
           <img
             src="<?php echo ($row['pic']) ?>"
             alt="pic"
           />
+        </a>
 
         <?php
         }

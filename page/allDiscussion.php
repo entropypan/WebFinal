@@ -33,7 +33,7 @@
       $sql = "SELECT * FROM posts ORDER BY PID ASC";
       $result = $conn->query($sql);
       // echo "<script>alert('$result->num_rows')</script>";
-      if ($result->num_rows > 0) {
+      if (($result != false) && ($result->num_rows > 0)) {
         while($row = $result->fetch_assoc()) {
           ?>
           <div class="discussion-block">
@@ -44,9 +44,11 @@
               $sql2 = "SELECT * FROM pics WHERE topic='$tpc' ORDER BY DID ASC";
               $result2 = $conn->query($sql2);
               $cnt = 0;
-              while(($row2 = $result2->fetch_assoc()) && $cnt < 4) {
+              while(($row2 = $result2->fetch_assoc()) && $cnt >= 0) {
                 ?>
+
                 <img src="<?php echo ($row2['pic']) ?>" />
+
                 <?php
                 $cnt = $cnt+1;
               }

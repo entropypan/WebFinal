@@ -1,3 +1,4 @@
+
 body {
   background-color: #ffffff;
   color: #141414;
@@ -45,10 +46,15 @@ header {
 
 header img {
   width: 150px;
-  height: 150px;
+  max-height: 150px;
   border-radius: 50%;
   margin-right: 20px;
+  object-fit: cover;
 }
+
+/*.profile-img{
+  
+}*/
 
 .user-info {
   display: flex;
@@ -156,15 +162,21 @@ main section {
 }
 
 .photo-container {
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 90%;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
   gap: 50px;
   padding: 20px 10%;
   overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 將照片靠左對齊 */
+  margin-top: 20px;
 }
 
 .photo-container img {
-  width: 100%;
-  border-radius: 10px;
+  max-width: 100%;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px
 }

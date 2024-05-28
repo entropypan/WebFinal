@@ -121,7 +121,7 @@
             <div class="user-avatar">
 
               <?php if(GetData('imgf') == 0) : ?>
-                <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+                <img src="../Allphotos/profile1.png" alt="User Avatar" /><br />
               <?php else : ?>
                 <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
               <?php endif; ?>

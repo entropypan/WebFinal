@@ -1,3 +1,4 @@
+
 /* Reset 樣式 */
 * {
   margin: 0;
@@ -100,13 +101,15 @@ h1 {
 
 .photos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-start; /* 將照片靠左對齊 */
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .photos img {
-  width: calc(25% - 20px);
+  max-width: 100%;
+  height: 200px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 5px; 
 }

@@ -31,7 +31,7 @@
     <header>
       
       <?php if(GetData('imgf') == 0) : ?>
-        <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+        <img src="../Allphotos/profile1.png" alt="User Avatar" /><br />
       <?php else : ?>
         <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
       <?php endif; ?>
@@ -56,7 +56,7 @@
     </header>
 
       <section class="button">
-        <a href="../page/allDiscussion.php" id="uploadedBtn">Uploaded</a>
+        <a href="../page/allDiscussion.php" id="uploadedBtn">Upload</a>
         <a href="../page/accountSettings.php" id="favoriteBtn">Settings</a>
       </section>
 
@@ -72,7 +72,9 @@
             while ($row = $result->fetch_assoc()) {
               if ($row['author'] == $_SESSION['ID']) {
               ?>
-                <img src="<?php echo ($row['pic']) ?>" alt="Photo 2" />
+                <a href="../page/aboutPhoto.php?DID=<?php echo ($row['DID']) ?>">
+                  <img src="<?php echo ($row['pic']) ?>" alt="Photo 2" />
+                </a>
               <?php
               }
             }
