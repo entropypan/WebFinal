@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picruise</title>
     <link rel="stylesheet" href="../css/CreatePage.css" />
+    <link rel="stylesheet" href="../css/index.css" />
   </head>
   <body style="background-image: url(../Allphotos/createback.jpg)">
 
@@ -36,13 +37,11 @@
           <div class="upload-section">
             <input type="hidden" name="imagestring">
             <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-
             <div class="preview_1">
               <img id="show_image" src="">
             </div>
-            
-          </div>
-          <br/><br/>
+          </div><br />
+          <br />
           <label for="equipment">Equipment:</label><br />
           <input
             type="text"
@@ -75,26 +74,18 @@
   <script>
     var imageProc = function (input) {
       if (input.files && input.files[0]) {
-        // 建立一個 FileReader 物件
         var reader = new FileReader();
-
-        // 當檔案讀取完後，所要進行的動作
         reader.onload = function (e) {
-          // 顯示圖片
           $('#show_image')
           .attr("src", e.target.result)
           .css("display","inline-block")
-          
-          // 將 DataURL 放到表單中
           $("input[name='imagestring']").val(e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
-
       }
     }
-
     $(document).ready(function() {
-      // 綁定事件
+
       $("#previewImage").change(function () {
         imageProc(this);
       });

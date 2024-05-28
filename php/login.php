@@ -26,7 +26,7 @@ if (!checkHasData($tablename, "mail", "mail", $mail_post)) {
             }
             else {
                 echo "<script>alert('密碼錯誤')</script>";
-                echo "<script>location.href='../page/login.php'</script>";
+                echo "<script>location.href='../page/loginPage.html'</script>";
             }
         }
     }

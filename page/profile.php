@@ -35,48 +35,39 @@
       <?php else : ?>
         <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
       <?php endif; ?>
+      
 
+      <!-- 連接資料庫取得使用者資料 -->
       <section id="mainProfile">
         <div id="idfollow" class="user-info">
-          
           <h1><?php GetUserData('tag') ?></h1>
-          
           <!-- <button>Follow</button> -->
         </div>
-
-        
         <h2><?php GetUserData('name') ?></h2>
         <!-- Bio -->
         <p><?php GetUserData('profile') ?></p>
-        
         <h3>Interests</h3>
         <ul>
           <li>#<?php GetUserData('tag1') ?></li>
           <li>#<?php GetUserData('tag2') ?></li>
           <li>#<?php GetUserData('tag3') ?></li>
-          
         </ul>
-        
       </section>
     </header>
 
-      
       <section class="button">
-        <button id="uploadedBtn">Uploaded Photos</button>
-        <button id="favoriteBtn">Settings</button>
+        <a href="../page/allDiscussion.php" id="uploadedBtn">Uploaded</a>
+        <a href="../page/accountSettings.php" id="favoriteBtn">Settings</a>
       </section>
 
-      
       <section id="uploadedPhotos">
         <div class="photo-container">
-          <!--<img src="../Allphotos/woody.jpg" alt="Photo 1" />
-          <img src="../Allphotos/buzz.jpg" alt="Photo 2" />
-          <img src="../Allphotos/slinky.jpg" alt="Photo 3" />
-          <img src="../Allphotos/toy3.jpg" alt="Photo 4" />-->
+          
+          <!-- 動態呈現自己上傳的圖片 -->
           <?php
           $sql = "SELECT * FROM pics ORDER BY DID ASC";
           $result = $conn->query($sql);
-          // echo "<script>alert('$result->num_rows')</script>";
+          
           if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
               if ($row['author'] == $_SESSION['ID']) {
@@ -86,46 +77,11 @@
               }
             }
           }
-
-
           ?>
           
         </div>
       </section>
 
-      
-      <section id="savedPhotos">
-        <div class="photo-container">
-          <img src="../Allphotos/monster.jpeg" alt="saved Photo 1" />
-          <img src="../Allphotos/monster1.jpg" alt="saved Photo 2" />
-          
-        </div>
-      </section>
     </main>
-
-    <script>
-      // JavaScript代码
-      document.addEventListener("DOMContentLoaded", function () {
-        const uploadedSection = document.getElementById("uploadedPhotos");
-        const savedSection = document.getElementById("savedPhotos");
-        const uploadedBtn = document.getElementById("uploadedBtn");
-        const savedBtn = document.getElementById("favoriteBtn");
-
-        // 隐藏收藏照片部分
-        savedSection.style.display = "none";
-
-        // 上傳照片按鈕點擊事件
-        uploadedBtn.addEventListener("click", function () {
-          uploadedSection.style.display = "block";
-          savedSection.style.display = "none";
-        });
-
-        // 收藏照片按鈕點擊事件
-        savedBtn.addEventListener("click", function () {
-          uploadedSection.style.display = "none";
-          savedSection.style.display = "block";
-        });
-      });
-    </script>
   </body>
 </html>

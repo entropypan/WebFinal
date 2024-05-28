@@ -32,20 +32,20 @@
         <label for="photo">Photo:</label><br />
         <form id="info-form">
           <div class="upload-section">
-            <input type="hidden" name="imagestring">
-            <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
-            
+            <input type="hidden" name="imagestring" required="required">
+            <input accept="image/*" id="previewImage" alt="User Avatar" type="file" required="required">
+
             <div class="preview_2">
               <img id="show_image" src="">
             </div>
-          </div>
-          <br/>
+          </div><br/>
           <br/>
           <label for="equipment">Equipment:</label><br />
           <input
             type="text"
             id="equipment"
             name="equipment"
+            required="required"
             placeholder="Fujifilm X-T4"
           /><br />
           <label for="time">Time:</label><br />
@@ -72,26 +72,18 @@
   <script>
     var imageProc = function (input) {
       if (input.files && input.files[0]) {
-        // 建立一個 FileReader 物件
         var reader = new FileReader();
-
-        // 當檔案讀取完後，所要進行的動作
         reader.onload = function (e) {
-          // 顯示圖片
           $('#show_image')
           .attr("src", e.target.result)
           .css("display","inline-block")
-          
-          // 將 DataURL 放到表單中
           $("input[name='imagestring']").val(e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
 
       }
     }
-
     $(document).ready(function() {
-      // 綁定事件
       $("#previewImage").change(function () {
         imageProc(this);
       });

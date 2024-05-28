@@ -38,9 +38,6 @@
             <li>
               <a href="#" onclick="showSetting('profile-info')">User Avatar</a>
             </li>
-            <li>
-              <a href="#" onclick="showSetting('notification')">Notifications</a>
-            </li>
           </ul>
         </div>
         <div id="main-content">
@@ -84,13 +81,6 @@
                 name="tag3"
                 value=<?php GetUserData('tag3') ?>
               /><br />
-              <!--<label for="email">Email:</label><br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder=
-              /><br />-->
               <label for="bio">Bio:</label><br />
               <textarea id="bio" name="bio"><?php GetUserData('profile') ?></textarea>
               <br />
@@ -131,7 +121,7 @@
             <div class="user-avatar">
 
               <?php if(GetData('imgf') == 0) : ?>
-                <img id="test" src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
+                <img src="../Allphotos/forgot.jpg" alt="User Avatar" /><br />
               <?php else : ?>
                 <img src=<?php GetUserData('img') ?> alt="User Avatar" /><br />
               <?php endif; ?>
@@ -140,54 +130,10 @@
 
               <input accept="image/*" id="previewImage" alt="User Avatar" type="file">
 
-              <div class="preview">
-                <img id="show_image" src="">
-              </div>
-
+              <img id="show_image" src="">          
               <br />
             </div>
-            <!--
-              <label for="bio">Bio:</label><br />
-              <textarea id="bio" name="bio"></textarea><br />
-              <label for="birthday">Birthday:</label><br />
-              <input type="date" id="birthday" name="birthday" /><br />
-              <label for="country">Country:</label><br />
-              <select id="country" name="country">
-                <option value="taiwan">Taiwan</option>
-                <option value="usa">U.S.A.</option>
-                <option value="uk">U.K.</option>
-                <option value="japan">Japan</option>
-                <option value="korea">Korea</option>
-                </select
-              ><br /><br />
-            -->
               <button type="submit" style="background-color: #0e0e0e">Save Changes</button>
-              <button type="button" onclick="cancelChanges()">Cancel</button>
-            </form>
-          </div>
-          <div id="notification" class="setting-page">
-            <h2>Notifications</h2>
-            <br>
-              <input
-                checked
-                type="checkbox"
-                id="news"
-                name="news"
-                value="news"
-              />
-              <label for="news"
-                >Email me when we have News and announcements</label
-              ><br /><br />
-              <input
-                checked
-                type="checkbox"
-                id="product-updates"
-                name="product-updates"
-                value="product-updates"
-              />
-              <label for="product-updates">Weekly product updates</label
-              ><br /><br />
-              <button type="submit" >Save Changes</button>
               <button type="button" onclick="cancelChanges()">Cancel</button>
             </form>
           </div>
@@ -211,14 +157,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-    var imageProc = function (input) {
+    var imageProc = function (input) { // 顯示圖片
       if (input.files && input.files[0]) {
-        // 建立一個 FileReader 物件
         var reader = new FileReader();
-
-        // 當檔案讀取完後，所要進行的動作
         reader.onload = function (e) {
-          // 顯示圖片
           $('#show_image')
           .attr("src", e.target.result)
           .css("display","inline-block")
@@ -230,16 +172,13 @@
           .css("background-position","center")
           .css("print-color-adjust","exact")
           .css("-webkit-print-color-adjust","exact")
-          // 將 DataURL 放到表單中
           $("input[name='imagestring']").val(e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
-
       }
     }
 
     $(document).ready(function() {
-      // 綁定事件
       $("#previewImage").change(function () {
         imageProc(this);
       });

@@ -101,12 +101,13 @@ h1 {
 .photos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 將照片靠左對齊 */
   margin-top: 20px;
 }
 
 .photos img {
-  width: calc(25% - 20px);
+  max-width: 100%;
+  height: 200px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 5px; 
 }
