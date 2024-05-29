@@ -21,6 +21,13 @@
     $sql = "SELECT * FROM users WHERE ID='$atr_name'";
     $result = $conn->query($sql);
     $ave = $result->fetch_assoc();
+    $uuid = $_SESSION['ID'];
+    $sql = "SELECT * FROM admin WHERE AID='$uuid'";
+    $result = $conn->query($sql);
+    $adminf = 0;
+    if (($result != false) && ($result->num_rows > 0)) {
+      $adminf = 1;
+    }
     ?>
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
@@ -56,31 +63,15 @@
           <p>Time: <?php echo ($mygo['time']) ?></p>
         </div>
         <div class="post-actions">
-          <!--
-          <button class="like-button">
-            <img src="../Allphotos/like.png" alt="Like" class="default-image" />
-            <img src="../Allphotos/liked.png" alt="Liked" class="clicked-image" />
-          </button>
-          <button class="saved-button">
-            <img src="../Allphotos/save.png" alt="Save" class="default-image" />
-            <img src="../Allphotos/saved.png" alt="Saved" class="clicked-image" />
-          </button>
-          <button class="follow-button">
-            <img
-              src="../Allphotos/follow.png"
-              alt="Follow"
-              class="default-image"
-            />
-            <img
-              src="../Allphotos/following.png"
-              alt="Following"
-              class="clicked-image"
-            />
-          </button>
-          -->
-          <button class="like-button">
-            <img src="../Allphotos/del.png" alt="Like" class="default-image" />
-          </button>
+          <form method="POST" action="../php/del.php">
+          <?php if (@$_SESSION['ID']) { 
+            if (($_SESSION['ID'] == $ave['ID']) || ($adminf == 1)) { ?>
+              <input type="hidden" id="delid" name="delid" value="<?php echo ($mygo['CID']) ?> "/>
+              <button type="submit" class="like-button">
+                <img src="../Allphotos/del.png" alt="Like" class="default-image" />
+              </button>
+          <?php }} ?>
+          </form>
         </div>
       </div>
     </div>

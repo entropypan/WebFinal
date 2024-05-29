@@ -23,9 +23,6 @@
     if ($gbc['ID'] == $_SESSION['ID']){
         echo "<script>location.href='../page/profile.php'</script>";
     }
-
-
-
     ?>
    
     <!-- 麵包屑 -->
