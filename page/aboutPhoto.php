@@ -67,7 +67,7 @@
           <?php if (@$_SESSION['ID']) { 
             if (($_SESSION['ID'] == $ave['ID']) || ($adminf == 1)) { ?>
               <input type="hidden" id="delid" name="delid" value="<?php echo ($mygo['CID']) ?> "/>
-              <button type="submit" class="like-button">
+              <button type="submit" class="like-button" onclick="return confirm('確定要刪除這則回覆?');">
                 <img src="../Allphotos/del.png" alt="Like" class="default-image" />
               </button>
           <?php }} ?>
