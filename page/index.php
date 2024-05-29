@@ -86,15 +86,22 @@
       $result = $conn->query($sql);
       if (($result != false) && ($result->num_rows > 0)) {
         while($row = $result->fetch_assoc()) {
-          ?>
-          <div class="card">
-            <img src="<?php echo ($row['photo']) ?>" class="card-img-top" alt="photo.jpg" />
-            <div class="card-body">
-              <h5 class="card-title"><?php echo ($row['topic']) ?></h5>
-              <a href="../page/discussion.php?topic=<?php echo ($row['topic']) ?>" class="joinbutton">Join</a>
+          $cid = $row['CID'];
+          $sql2 = "SELECT * FROM pics WHERE CID='$cid'";
+          $result2 = $conn->query($sql2);
+          if (($result2 != false) && ($result2->num_rows > 0)) {
+            while($row2 = $result2->fetch_assoc()) {
+            ?>
+            <div class="card">
+              <img src="<?php echo ($row2['pic']) ?>" class="card-img-top" alt="photo.jpg" />
+              <div class="card-body">
+                <h5 class="card-title"><?php echo ($row['topic']) ?></h5>
+                <a href="../page/discussion.php?topic=<?php echo ($row['topic']) ?>" class="joinbutton">Join</a>
+              </div>
             </div>
-          </div>
-          <?php
+            <?php
+            }
+          }
         }
       }
       ?>

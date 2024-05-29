@@ -16,6 +16,14 @@
         echo "<script>alert('請先登入')</script>";
         echo "<script>location.href='../page/loginPage.html'</script>";
     }
+    $uuid = $_SESSION['ID'];
+    $sql = "SELECT * FROM admin WHERE AID='$uuid'";
+    $result = $conn->query($sql);
+    if (($result != false) && ($result->num_rows > 0)) {
+        $adminf = 1;
+    } else {
+        $adminf = 0;
+    }
     ?>
    
     <!-- 麵包屑 -->
@@ -23,7 +31,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../page/index.php">Home</a></li>
         <li class="breadcrumb-item active" aria-current="Profile">
-          Profile
+          Profile<?php if($adminf == 1) {echo (" - Admin");} ?>
         </li>
       </ol>
     </nav>

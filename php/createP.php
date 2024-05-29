@@ -10,7 +10,7 @@ if (!(isset($_SESSION))) {
 
 mysqli_query($conn, 'SET NAMES utf8');
 $pass = 0;
-
+$CID = uniqid("c");
 $topic = $_POST["topic"];
 $equip_post = $_POST["equipment"];
 $time_post = $_POST["time"];
@@ -20,8 +20,8 @@ $atr = GetData("ID");
 $tpc = $_POST['topic'];
 
 if($pass == 0){
-    $sql = "INSERT INTO pics(topic,author,equip,time,loc,pic) 
-            VALUES ('$tpc','$atr','$equip_post','$time_post','$loc_post','$pic')";
+    $sql = "INSERT INTO pics(topic,author,equip,time,loc,pic,CID) 
+            VALUES ('$tpc','$atr','$equip_post','$time_post','$loc_post','$pic','$CID')";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     if ($result) {
